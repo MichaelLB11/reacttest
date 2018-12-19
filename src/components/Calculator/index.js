@@ -12,10 +12,9 @@ export default function Calculator() {
 
   return (
     <>
-      <button onClick={calc}>TESTBUTTON</button>
       <CalcDisplay displayVal="0" />
       <br />
-      <CalcButton buttonVal="1" onClick={calculate()} />
+      <CalcButton buttonVal="1" onClick={calc} />
       <CalcButton buttonVal="2" />
       <CalcButton buttonVal="3" />
       <br />
