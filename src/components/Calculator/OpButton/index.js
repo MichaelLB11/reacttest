@@ -1,15 +1,15 @@
 import React from "react";
 
-export default function ClearcButton({ buttonVal, calc }) {
+export default function CalcButton({ operator, setOp }) {
   return (
     <button
       onClick={() => {
-        calc(0);
+        setOp(curVal => operator);
       }}
       type="button"
       class="btn btn-lg btn-primary"
     >
-      {buttonVal}
+      {operator}
     </button>
   );
 }

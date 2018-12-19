@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function ClearcButton({ buttonVal, calc }) {
+export default function EqButton({ buttonVal, calc, previous, next, whichOp }) {
   return (
     <button
       onClick={() => {
-        calc(0);
+        calc(curVal => curVal + previous);
       }}
       type="button"
       class="btn btn-lg btn-primary"

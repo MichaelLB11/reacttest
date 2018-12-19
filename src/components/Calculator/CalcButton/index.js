@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function CalcButton({ buttonVal, calc }) {
+export default function CalcButton({ buttonVal, calc, update }) {
   return (
     <button
       onClick={() => {
-        calc(curVal => curVal + buttonVal);
+        update(curVal => buttonVal);
       }}
       type="button"
       class="btn btn-lg btn-primary"
