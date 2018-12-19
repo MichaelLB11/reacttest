@@ -1,34 +1,29 @@
 import React, { useState } from "react";
 import CalcButton from "./CalcButton";
 import CalcDisplay from "./CalcDisplay";
-
-function calculate(val) {
-  const [x, setDisplay] = useState(val);
-  return [x, () => setDisplay((x = val))];
-}
+import ClearButton from "./ClearButton";
 
 export default function Calculator() {
-  const [num, calc] = calculate();
+  const [num, calc] = useState(0);
 
   return (
     <>
-      <CalcDisplay displayVal="0" />
+      <CalcDisplay displayVal={num} />
       <br />
-      <CalcButton buttonVal="1" onClick={calc} />
-      <CalcButton buttonVal="2" />
-      <CalcButton buttonVal="3" />
+      <CalcButton buttonVal={1} calc={calc} />
+      <CalcButton buttonVal={2} calc={calc} />
+      <CalcButton buttonVal={3} calc={calc} />
       <br />
-      <CalcButton buttonVal="4" />
-      <CalcButton buttonVal="5" />
-      <CalcButton buttonVal="6" />
+      <CalcButton buttonVal={4} calc={calc} />
+      <CalcButton buttonVal={5} calc={calc} />
+      <CalcButton buttonVal={6} calc={calc} />
       <br />
-      <CalcButton buttonVal="7" />
-      <CalcButton buttonVal="8" />
-      <CalcButton buttonVal="9" />
+      <CalcButton buttonVal={7} calc={calc} />
+      <CalcButton buttonVal={8} calc={calc} />
+      <CalcButton buttonVal={9} calc={calc} />
       <br />
-      <CalcButton buttonVal="c" />
-      <CalcButton buttonVal="0" />
-      <CalcButton buttonVal="=" />
+      <ClearButton buttonVal="c" calc={calc} />
+      <CalcButton buttonVal={0} calc={calc} />
     </>
   );
 }

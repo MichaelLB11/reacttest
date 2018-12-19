@@ -4,7 +4,7 @@ export default function CalcButton({ buttonVal, calc }) {
   return (
     <button
       onClick={() => {
-        calc(curVal => curVal + buttonVal);
+        calc(curVal => 0);
       }}
       type="button"
       class="btn btn-lg btn-primary"
